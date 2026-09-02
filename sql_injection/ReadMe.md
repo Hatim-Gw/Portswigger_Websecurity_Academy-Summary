@@ -20,4 +20,9 @@ Build a practical understanding of SQL injection vulnerabilities using PortSwigg
 
 ## Steps performed
 Worked through each lab using Burp Suite Community to intercept and modify  `GET requests` :
--Break the original query using a single quote ` ' ` which closes the string, allowing the attacker to inject SQL query, and it is going to be treated as code rather than a string.
+- Break the original query using a single quote ` ' ` which closes the string, allowing the attacker to inject SQL query, and it is going to be treated as code rather than a string.
+- Bypass filters using ` '-- ` which comments the rest of the query (it's essential in every SQL injection)
+- UNION Attcak: `UNION SELECT`  First, determine the number of columns returned by the original query using `UNION SELECT NULL, NULL, {continue passing NULL  till it returns 200, not an error}--` then pull data from different DB tables.
+- Extracting users and passwords from an unknown schema by listing the tables of the database to identify the table; after that, retrieve the columns of that table; eventually, pull the users' data based on the columns and the table.
+- 
+

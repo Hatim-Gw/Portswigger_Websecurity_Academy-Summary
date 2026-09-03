@@ -25,4 +25,8 @@ Worked through each lab using Burp Suite Community to intercept and modify  `GET
 - UNION Attcak: `UNION SELECT`  First, determine the number of columns returned by the original query using `UNION SELECT NULL, NULL, {continue passing NULL  till it returns 200, not an error}--` then pull data from different DB tables.
 - Extracting users and passwords from an unknown schema by listing the tables of the database to identify the table; after that, retrieve the columns of that table; eventually, pull the users' data based on the columns and the table.
 - Using database-specific queries to deal with each kind of database, which can be found on this page: [SQL injection cheat sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet)
+- when the original query returns only a single column, it's necessary  to use the concatenation operator` || ` such as ` 'UNION SELECT username || '-' || password--`, to retrieve the whole data at once
 
+
+## Problem encountered 
+I got confused about the leading quote in UNION attack. It was not clear for me why a query like `Gifts' UNION SELECT ...` needed a `'`, which is used because of the application wraps the user inpput in single quotes, so by adding another single quote it clsoses the string

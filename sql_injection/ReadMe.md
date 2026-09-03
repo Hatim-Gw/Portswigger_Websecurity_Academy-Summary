@@ -24,5 +24,5 @@ Worked through each lab using Burp Suite Community to intercept and modify  `GET
 - Bypass filters using ` '-- ` which comments the rest of the query (it's essential in every SQL injection)
 - UNION Attcak: `UNION SELECT`  First, determine the number of columns returned by the original query using `UNION SELECT NULL, NULL, {continue passing NULL  till it returns 200, not an error}--` then pull data from different DB tables.
 - Extracting users and passwords from an unknown schema by listing the tables of the database to identify the table; after that, retrieve the columns of that table; eventually, pull the users' data based on the columns and the table.
-- 
+- Using database-specific queries to deal with each kind of database, which can be found on this page: [SQL injection cheat sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet)
 

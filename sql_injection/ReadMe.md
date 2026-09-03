@@ -29,4 +29,6 @@ Worked through each lab using Burp Suite Community to intercept and modify  `GET
 
 
 ## Problem encountered 
-I got confused about the leading quote in UNION attack. It was not clear for me why a query like `Gifts' UNION SELECT ...` needed a `'`, which is used because of the application wraps the user inpput in single quotes, so by adding another single quote it clsoses the string
+I got confused about the leading quote in UNION attack. It was not clear to me why a query like `Gifts' UNION SELECT ...` needed a `'`; it turns out it is used because the application wraps the user input in single quotes, so by adding another single quote, it closes the string.
+
+Locating the real data after schema discovery. After listing all database tables through  `information_schema.tables`, the relevant table wasn't obviously named `users`. It appeared as a randomized name `users_dzdwqp` among dozens of Postgres system tables. Had to specifically query `information_schema.columns WHERE table_name='users_dzdwqp'--` to find the actual column names before the final extraction query could be written.

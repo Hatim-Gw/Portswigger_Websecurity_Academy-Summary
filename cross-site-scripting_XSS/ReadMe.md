@@ -14,5 +14,14 @@ This write-up covers the three foundational XSS types: reflected, stored, and DO
 3. DOM XSS in `document.write` sink using source `location.search`
 
 
+## Steps Performed
 
+- **Reflected XSS**: inject a `<script>` payload directly into the search parameter that the server returns into the page, causing the script to execute immediately when the page loads.
+<img width="1500" height="758" alt="image" src="https://github.com/user-attachments/assets/ce499406-848d-49da-af53-720a39d84bb4" />
+
+- **Stored XSS**: inject a `<script>` payload into *a comment*(input field), which the web application stores and then loads and executes the injected script for every user who views the web page.
+
+<img width="1529" height="547" alt="image" src="https://github.com/user-attachments/assets/a6987d9c-ab87-47ee-95ad-d0b54ca418a2" />
+
+- 
 

@@ -25,5 +25,7 @@ This write-up covers the three foundational XSS types: reflected, stored, and DO
 
 - **DOM XX**: inject the script on the client side into `location.search` where it passes it into `document.write`; then, after the page is rendered, it executes the injected script.
 
+<img width="1744" height="1194" alt="image" src="https://github.com/user-attachments/assets/22a66731-9434-4e30-a51b-ddc3fb3bceb3" />
+
 - 
 

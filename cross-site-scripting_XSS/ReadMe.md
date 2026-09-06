@@ -27,5 +27,7 @@ This write-up covers the three foundational XSS types: reflected, stored, and DO
 
 <img width="1744" height="1194" alt="image" src="https://github.com/user-attachments/assets/22a66731-9434-4e30-a51b-ddc3fb3bceb3" />
 
-- 
+## Problems Encountered
+Assumed DOM XSS injection works the same way as Reflected XSS. Figured out it's a client-side vulnerability. So nothing reaches the server side.
+
 

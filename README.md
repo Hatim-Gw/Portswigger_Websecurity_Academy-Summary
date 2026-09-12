@@ -12,7 +12,6 @@ Practical writeups from working through [PortSwigger's Web Security Academy](htt
 | CSRF | 1 | [Cross-Site Request Forgery/ReadMe.md](./Cross-Site%20Request%20Forgery/ReadMe.md) |
 | Access Control | 3 | [Access_Control/ReadMe.md](./Access_Control/ReadMe.md) |
 
-**Total: 17 labs across 5 vulnerability classes**
 
 ## Methodology
 
